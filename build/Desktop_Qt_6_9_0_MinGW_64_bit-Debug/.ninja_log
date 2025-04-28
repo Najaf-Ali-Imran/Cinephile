@@ -1,0 +1,41 @@
+# ninja log v6
+155	357	7674653208776410	.qt/appCinephile_res.txt	96e74f97f68569a7
+155	357	7674653208776410	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/appCinephile_res.txt	96e74f97f68569a7
+132	360	7674653208776410	.qt/appCinephile_qml.txt	dcceb176555c1359
+132	360	7674653208776410	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/appCinephile_qml.txt	dcceb176555c1359
+180	508	7674653210318770	.qt/qml_imports/appCinephile_build.cmake	6806f10317585478
+180	508	7674653210318770	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/qml_imports/appCinephile_build.cmake	6806f10317585478
+509	1162	7674653215020179	appCinephile_autogen/timestamp	f40a5669b6791f83
+509	1162	7674653215020179	appCinephile_autogen/mocs_compilation.cpp	f40a5669b6791f83
+509	1162	7674653215020179	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/appCinephile_autogen/timestamp	f40a5669b6791f83
+509	1162	7674653215020179	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/appCinephile_autogen/mocs_compilation.cpp	f40a5669b6791f83
+1190	1314	7674653218321323	.qt/rcc/qrc_qmake_Cinephile.cpp	70bdb7d0e6bcde3a
+1190	1314	7674653218321323	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_Cinephile.cpp	70bdb7d0e6bcde3a
+1230	1328	7674653218528418	.qt/rcc/qrc_appCinephile_raw_qml_0.cpp	dd9624405f52371a
+1230	1328	7674653218528418	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qrc_appCinephile_raw_qml_0.cpp	dd9624405f52371a
+1173	1358	7674653218805307	meta_types/appCinephile_json_file_list.txt	cb7fbb500676b1f9
+1173	1358	7674653218805307	meta_types/appCinephile_json_file_list.txt.timestamp	cb7fbb500676b1f9
+1173	1358	7674653218805307	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/meta_types/appCinephile_json_file_list.txt	cb7fbb500676b1f9
+1173	1358	7674653218805307	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/meta_types/appCinephile_json_file_list.txt.timestamp	cb7fbb500676b1f9
+1208	1376	7674653218906626	.rcc/qmlcache/appCinephile_qmlcache_loader.cpp	a11a89a530cd8609
+1208	1376	7674653218906626	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appCinephile_qmlcache_loader.cpp	a11a89a530cd8609
+1359	1487	7674653220132862	meta_types/qt6appcinephile_debug_metatypes.json.gen	ade29d1370e03622
+1359	1487	7674653220132862	meta_types/qt6appcinephile_debug_metatypes.json	ade29d1370e03622
+1359	1487	7674653220132862	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/meta_types/qt6appcinephile_debug_metatypes.json.gen	ade29d1370e03622
+1359	1487	7674653220132862	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/meta_types/qt6appcinephile_debug_metatypes.json	ade29d1370e03622
+1488	1943	7674653223636005	appcinephile_qmltyperegistrations.cpp	388c35c4c1d00698
+1488	1943	7674653223636005	Cinephile/appCinephile.qmltypes	388c35c4c1d00698
+1488	1943	7674653223636005	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/appcinephile_qmltyperegistrations.cpp	388c35c4c1d00698
+1488	1943	7674653223636005	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile/appCinephile.qmltypes	388c35c4c1d00698
+1943	2204	7674653227172451	.rcc/qmlcache/appCinephile_Main_qml.cpp	5940b537d73b7d21
+1943	2204	7674653227172451	.rcc/qmlcache/appCinephile_Main_qml.cpp.aotstats	5940b537d73b7d21
+1943	2204	7674653227172451	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appCinephile_Main_qml.cpp	5940b537d73b7d21
+1943	2204	7674653227172451	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appCinephile_Main_qml.cpp.aotstats	5940b537d73b7d21
+2205	2637	7674653227392925	CMakeFiles/appCinephile.dir/appCinephile_autogen/mocs_compilation.cpp.obj	249cc7cb8a6bab45
+2240	2639	7674653227774935	CMakeFiles/appCinephile.dir/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_Cinephile.cpp.obj	972ab33019c1f531
+2281	2646	7674653228189513	CMakeFiles/appCinephile.dir/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qrc_appCinephile_raw_qml_0.cpp.obj	a9bd5b72049f2a26
+2228	8180	7674653227655841	CMakeFiles/appCinephile.dir/appcinephile_qmltyperegistrations.cpp.obj	382dcac42dcbdad8
+2266	8197	7674653228042226	CMakeFiles/appCinephile.dir/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appCinephile_Main_qml.cpp.obj	2b84d49edc151175
+2217	8366	7674653227552285	CMakeFiles/appCinephile.dir/main.cpp.obj	7bc84fd9559bc8a6
+2253	9644	7674653227885236	CMakeFiles/appCinephile.dir/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appCinephile_qmlcache_loader.cpp.obj	8cd194278f67cc9b
+9646	10627	7674653301845250	appCinephile.exe	4ad23a0c8683eb1f
