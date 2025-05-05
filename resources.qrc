@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/icons/email_icon.svg</file>
+        <file>assets/icons/google_icon.svg</file>
+        <file>assets/icons/lock_icon.svg</file>
+        <file>assets/icons/user_icon.svg</file>
+        <file>assets/icons/categories_icon.svg</file>
+        <file>assets/icons/home_icon.svg</file>
+        <file>assets/icons/more_icon.svg</file>
+        <file>assets/icons/favorites_icon.svg</file>
+        <file>assets/icons/profile_icon.svg</file>
+        <file>assets/icons/library_icon.svg</file>
+        <file>assets/icons/search.svg</file>
+        <file>assets/icons/settings.svg</file>
+        <file>assets/icons/actor2.svg</file>
+        <file>assets/icons/actor1.svg</file>
+        <file>assets/icons/db_connected.svg</file>
+        <file>assets/icons/db_disconnected.svg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,43 @@
+# ninja log v6
+35	1116	7680183668941988	build.ninja	727511ff589481f0
+1282	11177	7680173448613880	CMakeFiles/Cinephile.dir/Cinephile_autogen/mocs_compilation.cpp.obj	d0a03a229a0ac575
+16	289	7681424204295474	Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+290	3889	7681424207160289	CMakeFiles/Cinephile.dir/mainwindow.cpp.obj	d92c6ea38dc7f4da
+16	289	7681424204295474	Cinephile_autogen/timestamp	d006ef5681a91ebe
+278	2810	7679772653175409	CMakeFiles/Cinephile.dir/dashboardWidget.cpp.obj	a2a1cd78f0842045
+16	289	7681424204295474	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+1288	6122	7680173448673947	CMakeFiles/Cinephile.dir/main.cpp.obj	7eebfc047d700632
+16	289	7681424204295474	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/timestamp	d006ef5681a91ebe
+1051	9823	7679822755500697	CMakeFiles/Cinephile.dir/LoginWidget.cpp.obj	d0e32b6073cf4fdf
+3890	4693	7681424243166592	Cinephile.exe	5f24c95f60b7692c
+287	388	7680183681885315	Cinephile_autogen/EWIEGA46WW/qrc_resources.cpp	3b45055c773f1f46
+287	388	7680183681885315	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/EWIEGA46WW/qrc_resources.cpp	3b45055c773f1f46
+7	43	7678061334750320	CMakeFiles/clean.additional	baedbe210acaa455
+388	502	7680183682041751	CMakeFiles/Cinephile.dir/Cinephile_autogen/EWIEGA46WW/qrc_resources.cpp.obj	f2c4e9adbcb8bb19
+43	55	7678061335109262	clean	577b940aee94fbd7
+358	3212	7680182834017932	CMakeFiles/Cinephile.dir/DashboardWidget.cpp.obj	1cb6d996cfee8cf7
+268	3573	7679799326263876	CMakeFiles/Cinephile.dir/MainWindow.cpp.obj	1cb49cc5a386e019
+46	280	7681424581328368	Cinephile_autogen/timestamp	d006ef5681a91ebe
+46	280	7681424581328368	Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+46	280	7681424581328368	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/timestamp	d006ef5681a91ebe
+46	280	7681424581328368	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+282	4527	7681424583691774	CMakeFiles/Cinephile.dir/mainwindow.cpp.obj	d92c6ea38dc7f4da
+4527	5155	7681424626150059	Cinephile.exe	5f24c95f60b7692c
+25	295	7681426797189857	Cinephile_autogen/timestamp	d006ef5681a91ebe
+25	295	7681426797189857	Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+25	295	7681426797189857	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/timestamp	d006ef5681a91ebe
+25	295	7681426797189857	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+296	4552	7681426799855468	CMakeFiles/Cinephile.dir/mainwindow.cpp.obj	d92c6ea38dc7f4da
+4552	5156	7681426842463576	Cinephile.exe	5f24c95f60b7692c
+79	370	7681435276226897	Cinephile_autogen/timestamp	d006ef5681a91ebe
+79	370	7681435276226897	Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+79	370	7681435276226897	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/timestamp	d006ef5681a91ebe
+79	370	7681435276226897	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+371	6928	7681435279151859	CMakeFiles/Cinephile.dir/mainwindow.cpp.obj	d92c6ea38dc7f4da
+6929	7973	7681435344736442	Cinephile.exe	5f24c95f60b7692c
+37	280	7681435485246460	Cinephile_autogen/timestamp	d006ef5681a91ebe
+37	280	7681435485246460	Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+37	280	7681435485246460	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/timestamp	d006ef5681a91ebe
+37	280	7681435485246460	C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/mocs_compilation.cpp	d006ef5681a91ebe
+283	4430	7681435487710058	CMakeFiles/Cinephile.dir/mainwindow.cpp.obj	d92c6ea38dc7f4da
+4430	5025	7681435529183525	Cinephile.exe	5f24c95f60b7692c
