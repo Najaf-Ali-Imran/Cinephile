@@ -1,0 +1,62 @@
+// --- START OF FILE Theme.h ---
+
+#ifndef THEME_H
+#define THEME_H
+
+#include <QString>
+#include <QColor>
+
+struct AppTheme {
+    // --- Original Colors ---
+    static inline const QString BACKGROUND_DARK = "#1B1717"; // Original dark base
+    static inline const QString PANEL_LIGHT = "#EEEBDD";
+    static inline const QString PRIMARY_RED = "#CE1212";
+    static inline const QString DARK_RED = "#810000";
+    static inline const QString GRADIENT_MID_DARK = "#222222";
+    static inline const QString SKELETON_BG = "#333333"; // Good for borders, dividers, subtle bg
+    static inline const QString CONTENT_AREA_BG = "#1F1F1F"; // Used for TopBar/Content bg
+    static inline const QString SIDEBAR_BG = "#101010";     // Specific Sidebar bg
+
+    static inline const QString TEXT_ON_LIGHT = "#1B1717";
+    static inline const QString TEXT_ON_DARK = "#EEEBDD";           // Primary light text
+    static inline const QString TEXT_ON_DARK_SECONDARY = "#A0A0A0"; // Secondary light text
+    static inline const QString TEXT_PLACEHOLDER = "#999999";
+    static inline const QString TEXT_DISABLED = "#666666";
+
+    static inline const QString BUTTON_HOVER_LIGHT_BG = "#D13030";
+    static inline const QString BUTTON_HOVER_DARK_BG = "#A12020";
+    static inline const QString BUTTON_WHITE_BG = "#FFFFFF";
+    static inline const QString BUTTON_DISABLED_BG = "#CCCCCC";
+    static inline const QString BUTTON_BORDER_LIGHT = "#CCCCCC";
+    static inline const QString BUTTON_HOVER_GENERAL_BG = "#332F2F";
+    static inline const QString BUTTON_PRESSED_GENERAL_BG = "#555050";
+    static inline const QString BUTTON_CLOSE_HOVER_BG = "#CE1212";     // Hover for Close button
+    static inline const QString BUTTON_CLOSE_PRESSED_BG = "#810000"; // Pressed for Close button
+
+    static inline const QString OVERLAY_BUTTON_HOVER_BG = "rgba(238, 235, 221, 0.1)";
+    static inline const QString OVERLAY_BUTTON_PRESSED_BG = "rgba(238, 235, 221, 0.2)";
+    static inline const QString PRIMARY_RED_ALPHA_15 = "rgba(206, 18, 18, 0.15)";
+    static inline const QString PRIMARY_RED_ALPHA_30 = "rgba(206, 18, 18, 0.3)"; // Active Nav BG
+    static inline const QString INTERACTIVE_HOVER_BG = "#2A2A2A"; // General hover for dark items
+
+    static inline const QString INPUT_BG = "#252525";         // Search, Buttons bg
+    static inline const QString INPUT_BORDER = "#404040";     // Subtle border for inputs
+    static inline const QString INPUT_BORDER_FOCUS = "#CE1212"; // Focus border
+
+    static inline const QColor SHADOW_COLOR = QColor(0, 0, 0, 65);
+
+    // --- New Colors Added ---
+    static inline const QString MAIN_WINDOW_BG = "#000000";        // Pitch black main background
+    static inline const QString WINDOW_CONTROL_HOVER_BG = "#333333"; // Hover for Min/Max buttons (using SKELETON_BG value)
+
+    static inline const QString CATEGORY_DOT_BLUE = "#4287f5";
+    static inline const QString CATEGORY_DOT_GREEN = "#32a852";
+    static inline const QString CATEGORY_DOT_ORANGE = "#f5a142";
+    static inline const QString CATEGORY_DOT_PURPLE = "#a842f5";
+    static inline const QString CATEGORY_DOT_CYAN = "#42f5ef";
+    static inline const QString CATEGORY_DOT_PINK = "#f5429e";
+    static inline const QString CATEGORY_DOT_WHITE = "#E0E0E0";
+};
+
+#endif // THEME_H
+// --- END OF FILE Theme.h ---
