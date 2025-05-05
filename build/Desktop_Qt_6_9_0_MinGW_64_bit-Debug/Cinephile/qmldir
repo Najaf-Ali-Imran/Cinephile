@@ -1,5 +1,0 @@
-module Cinephile
-typeinfo appCinephile.qmltypes
-prefer :/qt/qml/Cinephile/
-Main 1.0 Main.qml
-
