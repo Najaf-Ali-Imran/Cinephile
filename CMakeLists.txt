@@ -21,8 +21,7 @@ set(PROJECT_SOURCES
         LoginWidget.h
         DashboardWidget.cpp
         DashboardWidget.h
-          # Make sure this is included
-        HomePage.h    # Make sure this is included
+        HomePage.h
         Theme.h
         resources.qrc
 )
@@ -45,18 +44,12 @@ else()
     endif()
 endif()
 
-# ONLY CHANGE NEEDED: Add Qt${QT_VERSION_MAJOR}::Network to target_link_libraries
 target_link_libraries(Cinephile PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Svg
     Qt${QT_VERSION_MAJOR}::Network  # ← Added this line
 )
 
-# ... (keep all remaining code below exactly the same)
-
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
-# If you are developing for iOS or macOS you should consider setting an
-# explicit, fixed bundle identifier manually though.
 if(${QT_VERSION} VERSION_LESS 6.1.0)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.Cinephile)
 endif()

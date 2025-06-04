@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-688f3bc14e2b97cea7d0.json",
+					"jsonFile" : "directory-.-Debug-289966f53aecd86dad5b.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Cinephile::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Cinephile-Debug-b6f0e2634f764325f9b7.json",
+					"jsonFile" : "target-Cinephile-Debug-ab2b079446ff12c398ad.json",
 					"name" : "Cinephile",
 					"projectIndex" : 0
 				},
