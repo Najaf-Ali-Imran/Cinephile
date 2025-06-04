@@ -1,19 +1,16 @@
 // --- START OF FILE main.cpp ---
 
-
-#include "MainWindow.h"
 #include <QApplication>
 #include <QFile>
+#include "MainWindow.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-
-
     MainWindow mainWindow;
 
-    mainWindow.updateDbStatusIcon(false);
+    mainWindow.updateDbStatusIcon(true);
     mainWindow.show();
 
     return app.exec();

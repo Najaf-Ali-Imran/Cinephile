@@ -1,5 +1,5 @@
-C:/Users/LENOVO/Documents/Najaf\ Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/EWIEGA46WW/moc_MainWindow.cpp: C:/Users/LENOVO/Documents/Najaf\ Uni/Projects/Cinephile/Cinephile/MainWindow.h \
-  C:/Users/LENOVO/Documents/Najaf\ Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/moc_predefs.h \
+C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/EWIEGA46WW/moc_MainWindow.cpp: C:/Users/DELL/Documents/Cinephile/MainWindow.h \
+  C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/moc_predefs.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QList \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QPoint \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \

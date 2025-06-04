@@ -3,27 +3,27 @@
 #include "DashboardWidget.h"
 #include "Theme.h"
 
-#include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QStackedWidget>
+#include <QDebug>
 #include <QGridLayout>
+#include <QHBoxLayout>
 #include <QLabel>
+#include <QLinearGradient>
 #include <QPainter>
 #include <QPainterPath>
-#include <QLinearGradient>
 #include <QPropertyAnimation>
-#include <QTimer>
-#include <QDebug>
 #include <QScrollArea> // Included
+#include <QStackedWidget>
+#include <QTimer>
+#include <QVBoxLayout>
 
 #include <cstdlib>
 #include <ctime>
 
-
 bool SkeletonElement::s_srandCalled = false;
 
 SkeletonElement::SkeletonElement(int borderRadius, QWidget *parent)
-    : QFrame(parent), m_borderRadius(borderRadius)
+    : QFrame(parent)
+    , m_borderRadius(borderRadius)
 {
     if (!s_srandCalled) {
         srand(static_cast<unsigned int>(time(nullptr)));
@@ -32,8 +32,11 @@ SkeletonElement::SkeletonElement(int borderRadius, QWidget *parent)
 
     setObjectName("skeletonElement");
 
-    setStyleSheet(QString("QWidget#skeletonElement { background-color: %1; border-radius: %2px; border: none; }")
-                      .arg(AppTheme::SKELETON_BG).arg(m_borderRadius));
+    setStyleSheet(
+        QString(
+            "QWidget#skeletonElement { background-color: %1; border-radius: %2px; border: none; }")
+            .arg(AppTheme::SKELETON_BG)
+            .arg(m_borderRadius));
 
     m_animation = new QPropertyAnimation(this, "shimmerPos", this);
     m_animation->setDuration(1600);
@@ -44,7 +47,7 @@ SkeletonElement::SkeletonElement(int borderRadius, QWidget *parent)
 
     int randomDelay = rand() % 400;
 
-    QTimer::singleShot(randomDelay, this, [this](){
+    QTimer::singleShot(randomDelay, this, [this]() {
         if (m_animation) {
             m_animation->start();
         }
@@ -53,7 +56,8 @@ SkeletonElement::SkeletonElement(int borderRadius, QWidget *parent)
 
 SkeletonElement::~SkeletonElement() {}
 
-void SkeletonElement::paintEvent(QPaintEvent *event) {
+void SkeletonElement::paintEvent(QPaintEvent *event)
+{
     QFrame::paintEvent(event);
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
@@ -74,7 +78,6 @@ void SkeletonElement::paintEvent(QPaintEvent *event) {
     painter.setClipPath(path);
     painter.fillRect(rect(), shimmerGradient);
 }
-
 
 DashboardWidget::DashboardWidget(QWidget *parent)
     : QWidget(parent)
@@ -98,14 +101,27 @@ void DashboardWidget::setupUi()
 
     m_contentStack = new QStackedWidget(this);
     m_contentStack->setObjectName("dashboardContentStack");
-    m_contentStack->setStyleSheet("QWidget#dashboardContentStack { background-color: transparent; }");
+    m_contentStack->setStyleSheet(
+        "QWidget#dashboardContentStack { background-color: transparent; }");
 
-    m_skeletonPage = setupSkeletonPage("skeletonPage", this, &DashboardWidget::setupHomeSkeletonLayout);
-    m_libraryPage = setupSkeletonPage("libraryPage", this, &DashboardWidget::setupLibrarySkeletonLayout);
-    m_categoriesPage = setupSkeletonPage("categoriesPage", this, &DashboardWidget::setupCategoriesSkeletonLayout);
-    m_favoritesPage = setupSkeletonPage("favoritesPage", this, &DashboardWidget::setupFavoritesSkeletonLayout);
-    m_profilePage = setupSkeletonPage("profilePage", this, &DashboardWidget::setupProfileSkeletonLayout);
-    m_settingsPage = setupSkeletonPage("settingsPage", this, &DashboardWidget::setupSettingsSkeletonLayout);
+    m_skeletonPage = setupSkeletonPage("skeletonPage",
+                                       this,
+                                       &DashboardWidget::setupHomeSkeletonLayout);
+    m_libraryPage = setupSkeletonPage("libraryPage",
+                                      this,
+                                      &DashboardWidget::setupLibrarySkeletonLayout);
+    m_categoriesPage = setupSkeletonPage("categoriesPage",
+                                         this,
+                                         &DashboardWidget::setupCategoriesSkeletonLayout);
+    m_favoritesPage = setupSkeletonPage("favoritesPage",
+                                        this,
+                                        &DashboardWidget::setupFavoritesSkeletonLayout);
+    m_profilePage = setupSkeletonPage("profilePage",
+                                      this,
+                                      &DashboardWidget::setupProfileSkeletonLayout);
+    m_settingsPage = setupSkeletonPage("settingsPage",
+                                       this,
+                                       &DashboardWidget::setupSettingsSkeletonLayout);
     m_morePage = createPlaceholderPage("More");
 
     m_contentStack->addWidget(m_skeletonPage);
@@ -116,51 +132,61 @@ void DashboardWidget::setupUi()
     m_contentStack->addWidget(m_profilePage);
     m_contentStack->addWidget(m_settingsPage);
 
-
     mainLayout->addWidget(m_contentStack);
-
 }
 
-QWidget* DashboardWidget::setupSkeletonPage(const QString& objectName, QWidget* parent, LayoutSetupFunction setupFunc)
+QWidget *DashboardWidget::setupSkeletonPage(const QString &objectName,
+                                            QWidget *parent,
+                                            LayoutSetupFunction setupFunc)
 {
     // Use QScrollArea to ensure content can scroll if it exceeds view height
-    QScrollArea* scrollArea = new QScrollArea(parent);
+    QScrollArea *scrollArea = new QScrollArea(parent);
     scrollArea->setObjectName(objectName + "ScrollArea");
     scrollArea->setWidgetResizable(true);
     scrollArea->setFrameShape(QFrame::NoFrame);
-    scrollArea->setStyleSheet(QString("QScrollArea#%1ScrollArea { background-color: transparent; border: none; }").arg(objectName));
-        // Add Scrollbar styling from MainWindow stylesheet if needed, or keep it simple
-    scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff); // Usually not needed horizontally
+    scrollArea->setStyleSheet(
+        QString("QScrollArea#%1ScrollArea { background-color: transparent; border: none; }")
+            .arg(objectName));
+    // Add Scrollbar styling from MainWindow stylesheet if needed, or keep it simple
+    scrollArea->setHorizontalScrollBarPolicy(
+        Qt::ScrollBarAlwaysOff); // Usually not needed horizontally
     scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded); // Show only when needed
-
 
     QWidget *container = new QWidget(); // Content widget for the scroll area
     container->setObjectName(objectName);
-    container->setStyleSheet(QString("QWidget#%1 { background-color: transparent; }").arg(objectName));
+    container->setStyleSheet(
+        QString("QWidget#%1 { background-color: transparent; }").arg(objectName));
     (this->*setupFunc)(container); // Populate the container widget
 
     scrollArea->setWidget(container); // Put the container inside the scroll area
-    return scrollArea; // Return the scroll area to be added to the stack
+    return scrollArea;                // Return the scroll area to be added to the stack
 }
 
-
-void DashboardWidget::addSkeletonElement(SkeletonElement* element, QWidget* pageWidget) {
-    if (!pageWidget) return;
+void DashboardWidget::addSkeletonElement(SkeletonElement *element, QWidget *pageWidget)
+{
+    if (!pageWidget)
+        return;
     QString pageName = pageWidget->objectName();
     // Remove "ScrollArea" suffix if present before checking
     pageName.remove("ScrollArea");
 
-    if (pageName == "skeletonPage") m_homeSkeletonElements.append(element);
-    else if (pageName == "libraryPage") m_librarySkeletonElements.append(element);
-    else if (pageName == "categoriesPage") m_categoriesSkeletonElements.append(element);
-    else if (pageName == "favoritesPage") m_favoritesSkeletonElements.append(element);
-    else if (pageName == "profilePage") m_profileSkeletonElements.append(element);
-    else if (pageName == "settingsPage") m_settingsSkeletonElements.append(element);
+    if (pageName == "skeletonPage")
+        m_homeSkeletonElements.append(element);
+    else if (pageName == "libraryPage")
+        m_librarySkeletonElements.append(element);
+    else if (pageName == "categoriesPage")
+        m_categoriesSkeletonElements.append(element);
+    else if (pageName == "favoritesPage")
+        m_favoritesSkeletonElements.append(element);
+    else if (pageName == "profilePage")
+        m_profileSkeletonElements.append(element);
+    else if (pageName == "settingsPage")
+        m_settingsSkeletonElements.append(element);
 
     m_skeletonElements.append(element); // Keep track of all elements for cleanup
 }
 
-void DashboardWidget::setupHomeSkeletonLayout(QWidget* parentWidget)
+void DashboardWidget::setupHomeSkeletonLayout(QWidget *parentWidget)
 {
     qDeleteAll(m_homeSkeletonElements);
     m_homeSkeletonElements.clear();
@@ -208,7 +234,8 @@ void DashboardWidget::setupHomeSkeletonLayout(QWidget* parentWidget)
     layout->setRowStretch(layout->rowCount(), 1);
 }
 
-void DashboardWidget::setupLibrarySkeletonLayout(QWidget* parentWidget) {
+void DashboardWidget::setupLibrarySkeletonLayout(QWidget *parentWidget)
+{
     qDeleteAll(m_librarySkeletonElements);
     m_librarySkeletonElements.clear();
 
@@ -223,7 +250,7 @@ void DashboardWidget::setupLibrarySkeletonLayout(QWidget* parentWidget) {
     mainVLayout->addSpacing(10);
 
     QStringList sections = {"Recently Watched", "Liked Movies", "Recommendations"};
-    for (const QString& title : sections) {
+    for (const QString &title : sections) {
         SkeletonElement *sectionTitle = new SkeletonElement(6);
         sectionTitle->setFixedSize(200, 26);
         mainVLayout->addWidget(sectionTitle, 0, Qt::AlignLeft);
@@ -235,7 +262,8 @@ void DashboardWidget::setupLibrarySkeletonLayout(QWidget* parentWidget) {
         for (int i = 0; i < 5; ++i) { // Show 5 cards horizontally per section
             SkeletonElement *card = new SkeletonElement(8);
             card->setMinimumSize(160, 120); // Slightly smaller cards for horizontal rows
-            card->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed); // Fix size for horizontal layout
+            card->setSizePolicy(QSizePolicy::Fixed,
+                                QSizePolicy::Fixed); // Fix size for horizontal layout
             cardLayout->addWidget(card);
             addSkeletonElement(card, parentWidget);
         }
@@ -247,7 +275,8 @@ void DashboardWidget::setupLibrarySkeletonLayout(QWidget* parentWidget) {
     mainVLayout->addStretch(); // Pushes all sections up
 }
 
-void DashboardWidget::setupCategoriesSkeletonLayout(QWidget* parentWidget) {
+void DashboardWidget::setupCategoriesSkeletonLayout(QWidget *parentWidget)
+{
     qDeleteAll(m_categoriesSkeletonElements);
     m_categoriesSkeletonElements.clear();
 
@@ -263,7 +292,7 @@ void DashboardWidget::setupCategoriesSkeletonLayout(QWidget* parentWidget) {
 
     // Example categories for skeleton
     QStringList categories = {"Action", "Comedy", "Drama", "Sci-Fi", "Horror", "Documentary"};
-    for (const QString& title : categories) {
+    for (const QString &title : categories) {
         // Category Title Skeleton
         SkeletonElement *catTitle = new SkeletonElement(6);
         catTitle->setFixedSize(180, 26); // Size for category title
@@ -273,11 +302,12 @@ void DashboardWidget::setupCategoriesSkeletonLayout(QWidget* parentWidget) {
 
         // Horizontal layout for cards in this category
         QHBoxLayout *cardLayout = new QHBoxLayout();
-        cardLayout->setSpacing(25); // Spacing between cards
+        cardLayout->setSpacing(25);   // Spacing between cards
         for (int i = 0; i < 5; ++i) { // Show 5 cards horizontally per category
             SkeletonElement *card = new SkeletonElement(8);
             card->setMinimumSize(160, 120); // Card size
-            card->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed); // Fixed size for horizontal layout
+            card->setSizePolicy(QSizePolicy::Fixed,
+                                QSizePolicy::Fixed); // Fixed size for horizontal layout
             cardLayout->addWidget(card);
             addSkeletonElement(card, parentWidget);
         }
@@ -289,7 +319,8 @@ void DashboardWidget::setupCategoriesSkeletonLayout(QWidget* parentWidget) {
     mainVLayout->addStretch(); // Pushes all category sections up
 }
 
-void DashboardWidget::setupFavoritesSkeletonLayout(QWidget* parentWidget) {
+void DashboardWidget::setupFavoritesSkeletonLayout(QWidget *parentWidget)
+{
     qDeleteAll(m_favoritesSkeletonElements);
     m_favoritesSkeletonElements.clear();
 
@@ -322,7 +353,8 @@ void DashboardWidget::setupFavoritesSkeletonLayout(QWidget* parentWidget) {
     mainVLayout->addStretch();
 }
 
-void DashboardWidget::setupProfileSkeletonLayout(QWidget* parentWidget) {
+void DashboardWidget::setupProfileSkeletonLayout(QWidget *parentWidget)
+{
     qDeleteAll(m_profileSkeletonElements);
     m_profileSkeletonElements.clear();
 
@@ -357,7 +389,7 @@ void DashboardWidget::setupProfileSkeletonLayout(QWidget* parentWidget) {
     mainVLayout->addLayout(profileHeaderLayout);
 
     QStringList sections = {"Library Snapshot", "Favorites Snapshot"};
-    for (const QString& title : sections) {
+    for (const QString &title : sections) {
         SkeletonElement *sectionTitle = new SkeletonElement(6);
         sectionTitle->setFixedSize(200, 26);
         mainVLayout->addWidget(sectionTitle, 0, Qt::AlignLeft);
@@ -380,7 +412,8 @@ void DashboardWidget::setupProfileSkeletonLayout(QWidget* parentWidget) {
     mainVLayout->addStretch();
 }
 
-void DashboardWidget::setupSettingsSkeletonLayout(QWidget* parentWidget) {
+void DashboardWidget::setupSettingsSkeletonLayout(QWidget *parentWidget)
+{
     qDeleteAll(m_settingsSkeletonElements);
     m_settingsSkeletonElements.clear();
 
@@ -411,8 +444,10 @@ void DashboardWidget::setupSettingsSkeletonLayout(QWidget* parentWidget) {
         } else { // Example: Toggle switch
             control->setFixedSize(60, 30);
             control->m_borderRadius = 15; // Make it pill-shaped
-            control->setStyleSheet(QString("QWidget#skeletonElement { background-color: %1; border-radius: %2px; border: none; }")
-                                       .arg(AppTheme::SKELETON_BG).arg(control->m_borderRadius));
+            control->setStyleSheet(QString("QWidget#skeletonElement { background-color: %1; "
+                                           "border-radius: %2px; border: none; }")
+                                       .arg(AppTheme::SKELETON_BG)
+                                       .arg(control->m_borderRadius));
         }
         settingRow->addWidget(control, 0, Qt::AlignRight | Qt::AlignVCenter);
         addSkeletonElement(control, parentWidget);
@@ -423,10 +458,10 @@ void DashboardWidget::setupSettingsSkeletonLayout(QWidget* parentWidget) {
     mainVLayout->addStretch();
 }
 
-QWidget* DashboardWidget::createPlaceholderPage(const QString& title)
+QWidget *DashboardWidget::createPlaceholderPage(const QString &title)
 {
     // This function remains the same, creates a simple placeholder page
-    QWidget* page = new QWidget();
+    QWidget *page = new QWidget();
     QString objName = title.toLower();
     objName.remove(QLatin1Char(' '));
     page->setObjectName(objName + "Page");
@@ -440,8 +475,9 @@ QWidget* DashboardWidget::createPlaceholderPage(const QString& title)
     placeholderLabel->setObjectName("placeholderContentLabel");
     placeholderLabel->setAlignment(Qt::AlignCenter);
 
-    placeholderLabel->setStyleSheet(QString("QLabel { color: %1; font-size: 24px; font-weight: bold; }")
-                                        .arg(AppTheme::TEXT_ON_DARK_SECONDARY));
+    placeholderLabel->setStyleSheet(
+        QString("QLabel { color: %1; font-size: 24px; font-weight: bold; }")
+            .arg(AppTheme::TEXT_ON_DARK_SECONDARY));
 
     layout->addWidget(placeholderLabel);
     layout->addStretch();
@@ -449,30 +485,100 @@ QWidget* DashboardWidget::createPlaceholderPage(const QString& title)
     return page;
 }
 
-
 // --- Public Slots ---
-void DashboardWidget::showHome() { if(m_skeletonPage) m_contentStack->setCurrentWidget(m_skeletonPage); }
-void DashboardWidget::showLibrary() { if(m_libraryPage) m_contentStack->setCurrentWidget(m_libraryPage); }
-void DashboardWidget::showCategories() { if(m_categoriesPage) m_contentStack->setCurrentWidget(m_categoriesPage); }
-void DashboardWidget::showFavorites() { if(m_favoritesPage) m_contentStack->setCurrentWidget(m_favoritesPage); }
-void DashboardWidget::showMore() { if(m_morePage) m_contentStack->setCurrentWidget(m_morePage); }
-void DashboardWidget::showProfile() { if(m_profilePage) m_contentStack->setCurrentWidget(m_profilePage); }
-void DashboardWidget::showSettings() { if(m_settingsPage) m_contentStack->setCurrentWidget(m_settingsPage); }
+void DashboardWidget::showHome()
+{
+    qDebug() << "Home button clicked - showing home page";
 
-void DashboardWidget::showSearchResults(const QString& query)
+    if (m_skeletonPage) {
+        qDebug() << "Showing skeleton page temporarily";
+        m_contentStack->setCurrentWidget(m_skeletonPage);
+    }
+
+    if (!m_homePage) {
+        qDebug() << "Creating HomePage for the first time";
+        m_homePage = new HomePage();
+        m_contentStack->insertWidget(1, m_homePage);
+
+        connect(m_homePage, &HomePage::movieClicked, this, &DashboardWidget::showMovieDetails);  // Add this
+
+        connect(m_homePage, &HomePage::dataLoaded, this, [this]() {
+            qDebug() << "HomePage data loaded - switching to it";
+            m_contentStack->setCurrentWidget(m_homePage);
+        });
+    }
+
+    qDebug() << "Loading TMDB data";
+    m_homePage->loadData();
+}
+
+void DashboardWidget::showMovieDetails(int id, const QString &type) {
+    if (!m_movieDetailWidget) {
+        m_movieDetailWidget = new MovieDetailWidget(m_homePage->getApiKey());  // Assuming you add getApiKey() to HomePage
+        m_movieDetailWidget->setImageBaseUrl(m_homePage->getImageBaseUrl());  // Add these getters to HomePage
+        m_movieDetailWidget->setBackdropSize(m_homePage->getBackdropSize());
+        m_movieDetailWidget->setPosterSize(m_homePage->getPosterSize());
+
+        connect(m_movieDetailWidget, &MovieDetailWidget::goBackRequested, this, &DashboardWidget::showHome);
+
+        m_contentStack->addWidget(m_movieDetailWidget);
+    }
+
+    m_movieDetailWidget->loadDetails(id, type);
+    m_contentStack->setCurrentWidget(m_movieDetailWidget);
+}
+
+
+
+void DashboardWidget::showLibrary()
+{
+    if (m_libraryPage)
+        m_contentStack->setCurrentWidget(m_libraryPage);
+}
+void DashboardWidget::showCategories()
+{
+    if (m_categoriesPage)
+        m_contentStack->setCurrentWidget(m_categoriesPage);
+}
+void DashboardWidget::showFavorites()
+{
+    if (m_favoritesPage)
+        m_contentStack->setCurrentWidget(m_favoritesPage);
+}
+void DashboardWidget::showMore()
+{
+    if (m_morePage)
+        m_contentStack->setCurrentWidget(m_morePage);
+}
+void DashboardWidget::showProfile()
+{
+    if (m_profilePage)
+        m_contentStack->setCurrentWidget(m_profilePage);
+}
+void DashboardWidget::showSettings()
+{
+    if (m_settingsPage)
+        m_contentStack->setCurrentWidget(m_settingsPage);
+}
+
+void DashboardWidget::showSearchResults(const QString &query)
 {
     qDebug() << "Dashboard: Showing Search Results for:" << query;
 
-    QWidget* existingSearchPage = nullptr;
-    for(int i = 0; i < m_contentStack->count(); ++i) {
-        if(m_contentStack->widget(i)->objectName() == "searchresultsPage") {
+    QWidget *existingSearchPage = nullptr;
+    for (int i = 0; i < m_contentStack->count(); ++i) {
+        if (m_contentStack->widget(i)->objectName() == "searchresultsPage") {
             // Find the scroll area if it exists
-            QScrollArea* scrollArea = qobject_cast<QScrollArea*>(m_contentStack->widget(i));
-            if (scrollArea) existingSearchPage = scrollArea->widget(); // Get the widget inside
-            else existingSearchPage = m_contentStack->widget(i); // Fallback if not a scroll area
+            QScrollArea *scrollArea = qobject_cast<QScrollArea *>(m_contentStack->widget(i));
+            if (scrollArea)
+                existingSearchPage = scrollArea->widget(); // Get the widget inside
+            else
+                existingSearchPage = m_contentStack->widget(i); // Fallback if not a scroll area
 
             // Optionally update the label within the page content widget
-            QLabel* label = existingSearchPage ? existingSearchPage->findChild<QLabel*>("placeholderContentLabel") : nullptr;
+            QLabel *label = existingSearchPage
+                                ? existingSearchPage->findChild<QLabel *>("placeholderContentLabel")
+                                : nullptr;
             if (label) {
                 label->setText(QString("Search Results for '%1'").arg(query));
             }
@@ -480,23 +586,26 @@ void DashboardWidget::showSearchResults(const QString& query)
         }
     }
 
-    if(existingSearchPage) {
+    if (existingSearchPage) {
         // We want to show the container (ScrollArea) in the stack
-        QWidget* containerWidget = nullptr;
-        for(int i = 0; i < m_contentStack->count(); ++i) {
-            if(m_contentStack->widget(i)->objectName() == "searchresultsPageScrollArea" || m_contentStack->widget(i)->objectName() == "searchresultsPage") {
+        QWidget *containerWidget = nullptr;
+        for (int i = 0; i < m_contentStack->count(); ++i) {
+            if (m_contentStack->widget(i)->objectName() == "searchresultsPageScrollArea"
+                || m_contentStack->widget(i)->objectName() == "searchresultsPage") {
                 containerWidget = m_contentStack->widget(i);
                 break;
             }
         }
-        if(containerWidget) m_contentStack->setCurrentWidget(containerWidget);
+        if (containerWidget)
+            m_contentStack->setCurrentWidget(containerWidget);
 
     } else {
         // Create a new placeholder page inside a scroll area
-        QWidget* searchPageContent = createPlaceholderPage(QString("Search Results for '%1'").arg(query));
+        QWidget *searchPageContent = createPlaceholderPage(
+            QString("Search Results for '%1'").arg(query));
         searchPageContent->setObjectName("searchresultsPage"); // Content widget name
 
-        QScrollArea* searchScrollArea = new QScrollArea(); // Container scroll area
+        QScrollArea *searchScrollArea = new QScrollArea();              // Container scroll area
         searchScrollArea->setObjectName("searchresultsPageScrollArea"); // Name for the scroll area
         searchScrollArea->setWidgetResizable(true);
         searchScrollArea->setFrameShape(QFrame::NoFrame);

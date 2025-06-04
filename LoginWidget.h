@@ -3,18 +3,17 @@
 #ifndef LOGINWIDGET_H
 #define LOGINWIDGET_H
 
-#include <QtWidgets>
-#include <QPropertyAnimation>
 #include <QEasingCurve>
-#include <QParallelAnimationGroup>
 #include <QGraphicsDropShadowEffect>
 #include <QIcon>
 #include <QMouseEvent>
+#include <QParallelAnimationGroup>
 #include <QPoint>
-#include <QWidget>
+#include <QPropertyAnimation>
 #include <QResizeEvent>
 #include <QTimer>
-
+#include <QWidget>
+#include <QtWidgets>
 
 class QLineEdit;
 class QPushButton;
@@ -26,16 +25,19 @@ class LoginForm;
 class RegistrationForm;
 class InputField;
 
-
-class InputField : public QWidget {
+class InputField : public QWidget
+{
     Q_OBJECT
 public:
-    explicit InputField(const QString &iconPath, const QString &placeholder, bool isPassword = false, QWidget *parent = nullptr);
+    explicit InputField(const QString &iconPath,
+                        const QString &placeholder,
+                        bool isPassword = false,
+                        QWidget *parent = nullptr);
     QString text() const;
     void setText(const QString &text);
     void clear();
     void setFocus();
-    QLineEdit* lineEdit() const { return m_lineEdit; }
+    QLineEdit *lineEdit() const { return m_lineEdit; }
 
 signals:
     void textChanged(const QString &text);
@@ -45,8 +47,8 @@ private:
     QLineEdit *m_lineEdit;
 };
 
-
-class RegistrationForm : public QWidget {
+class RegistrationForm : public QWidget
+{
     Q_OBJECT
 public:
     explicit RegistrationForm(QWidget *parent = nullptr);
@@ -70,11 +72,11 @@ private slots:
 
 private:
     void setupUI();
-    QPushButton* createGoogleButton(const QString& objectName);
+    QPushButton *createGoogleButton(const QString &objectName);
 };
 
-
-class LoginForm : public QWidget {
+class LoginForm : public QWidget
+{
     Q_OBJECT
 public:
     explicit LoginForm(QWidget *parent = nullptr);
@@ -97,11 +99,11 @@ private slots:
 
 private:
     void setupUI();
-    QPushButton* createGoogleButton(const QString& objectName);
+    QPushButton *createGoogleButton(const QString &objectName);
 };
 
-
-class LoginWidget : public QWidget {
+class LoginWidget : public QWidget
+{
     Q_OBJECT
 
 public:
@@ -119,13 +121,12 @@ public slots:
 
     void slideToRegister();
     void slideToLogin();
-    void showLoginError(const QString& message);
-    void showRegistrationError(const QString& message);
+    void showLoginError(const QString &message);
+    void showRegistrationError(const QString &message);
     void clearLoginPassword();
     void clearRegistrationPasswords();
 
 protected:
-
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
@@ -142,14 +143,12 @@ private slots:
     void onInternalCloseClicked();
 
 private:
-
-    QWidget* createOverlayPanel(bool isLoginPanel);
-    QWidget* createCustomWindowControls();
+    QWidget *createOverlayPanel(bool isLoginPanel);
+    QWidget *createCustomWindowControls();
     void setupUI();
     void applyStyles();
     void setupAnimations();
     void updateOverlayContent(bool showLoginInvite);
-
 
     QFrame *panelsFrame;
     QHBoxLayout *panelsLayout;
@@ -158,20 +157,16 @@ private:
     LoginForm *loginForm;
     RegistrationForm *registrationForm;
 
-
     QLabel *overlayTitle;
     QLabel *overlayText;
     QPushButton *overlayButton;
 
-
     QPushButton *internalMinimizeButton;
     QPushButton *internalCloseButton;
-
 
     QPropertyAnimation *overlayAnimation = nullptr;
     bool isLoginVisible;
     bool m_initialPositionsSet;
-
 
     QPoint m_dragPosition;
     bool m_dragging = false;

@@ -1,18 +1,18 @@
 {
 	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
-	"BUILD_DIR" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile",
+	"BUILD_DIR" : "C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/DELL/Documents/Cinephile",
 	"CMAKE_EXECUTABLE" : "C:/Qt/Tools/CMake_64/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/CMakeLists.txt",
-		"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake",
-		"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
+		"C:/Users/DELL/Documents/Cinephile/CMakeLists.txt",
+		"C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake",
+		"C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake",
-		"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake",
@@ -25,7 +25,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake",
-		"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake",
+		"C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
@@ -340,49 +340,106 @@
 		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateAdditionalTargetInfo.cmake",
 		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateVersionlessAliasTargets.cmake",
 		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Svg/Qt6SvgVersionlessAliasTargets.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersionImpl.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkDependencies.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateConfigVersion.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateConfigVersionImpl.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateDependencies.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateTargets.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6NetworkPrivate/Qt6NetworkPrivateVersionlessAliasTargets.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkPlugins.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginTargets.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QNLMNIPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginTargets.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QSchannelBackendPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendCertOnlyPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake",
-		"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/resources.qrc"
+		"C:/Users/DELL/Documents/Cinephile/resources.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile",
+	"CMAKE_SOURCE_DIR" : "C:/Users/DELL/Documents/Cinephile",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/deps",
+	"DEP_FILE" : "C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "Cinephile_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/DashboardWidget.h",
+			"C:/Users/DELL/Documents/Cinephile/DashboardWidget.h",
 			"MU",
 			"EWIEGA46WW/moc_DashboardWidget.cpp",
 			null
 		],
 		[
-			"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/LoginWidget.h",
+			"C:/Users/DELL/Documents/Cinephile/HomePage.h",
+			"MU",
+			"EWIEGA46WW/moc_HomePage.cpp",
+			null
+		],
+		[
+			"C:/Users/DELL/Documents/Cinephile/LoginWidget.h",
 			"MU",
 			"EWIEGA46WW/moc_LoginWidget.cpp",
 			null
 		],
 		[
-			"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/MainWindow.h",
+			"C:/Users/DELL/Documents/Cinephile/MainWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_MainWindow.cpp",
 			null
 		],
 		[
-			"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/Theme.h",
+			"C:/Users/DELL/Documents/Cinephile/MovieCard.h",
+			"MU",
+			"EWIEGA46WW/moc_MovieCard.cpp",
+			null
+		],
+		[
+			"C:/Users/DELL/Documents/Cinephile/MovieDetailWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_MovieDetailWidget.cpp",
+			null
+		],
+		[
+			"C:/Users/DELL/Documents/Cinephile/Theme.h",
 			"MU",
 			"EWIEGA46WW/moc_Theme.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/include",
-	"MOC_COMPILATION_FILE" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_NEEDS_QMAIN",
+		"QT_NETWORK_LIB",
 		"QT_SVG_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
@@ -407,6 +464,7 @@
 		"C:/Qt/6.9.0/mingw_64/include/QtWidgets",
 		"C:/Qt/6.9.0/mingw_64/include/QtGui",
 		"C:/Qt/6.9.0/mingw_64/include/QtSvg",
+		"C:/Qt/6.9.0/mingw_64/include/QtNetwork",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32",
 		"C:/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward",
@@ -434,39 +492,26 @@
 		"-c",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
-	"PARALLEL" : 6,
-	"PARSE_CACHE_FILE" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/Cinephile_autogen.dir/ParseCache.txt",
+	"PARALLEL" : 2,
+	"PARSE_CACHE_FILE" : "C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/Cinephile_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/Qt/6.9.0/mingw_64/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/Qt/6.9.0/mingw_64/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 9,
-	"SETTINGS_FILE" : "C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/Cinephile_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/Cinephile_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[
-			"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/DashboardWidget.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/LoginWidget.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/main.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/LENOVO/Documents/Najaf Uni/Projects/Cinephile/Cinephile/mainwindow.cpp",
-			"MU",
-			null
-		]
+		[ "C:/Users/DELL/Documents/Cinephile/DashboardWidget.cpp", "MU", null ],
+		[ "C:/Users/DELL/Documents/Cinephile/HomePage.cpp", "MU", null ],
+		[ "C:/Users/DELL/Documents/Cinephile/LoginWidget.cpp", "MU", null ],
+		[ "C:/Users/DELL/Documents/Cinephile/MovieCard.cpp", "MU", null ],
+		[ "C:/Users/DELL/Documents/Cinephile/MovieDetailWidget.cpp", "MU", null ],
+		[ "C:/Users/DELL/Documents/Cinephile/main.cpp", "MU", null ],
+		[ "C:/Users/DELL/Documents/Cinephile/mainwindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

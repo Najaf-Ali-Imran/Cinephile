@@ -16,5 +16,6 @@
         <file>assets/icons/actor1.svg</file>
         <file>assets/icons/db_connected.svg</file>
         <file>assets/icons/db_disconnected.svg</file>
+        <file>assets/icons/back.svg</file>
     </qresource>
 </RCC>

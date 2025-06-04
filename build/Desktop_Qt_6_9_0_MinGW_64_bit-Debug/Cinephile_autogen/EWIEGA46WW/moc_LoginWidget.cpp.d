@@ -1,5 +1,5 @@
-C:/Users/LENOVO/Documents/Najaf\ Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/EWIEGA46WW/moc_LoginWidget.cpp: C:/Users/LENOVO/Documents/Najaf\ Uni/Projects/Cinephile/Cinephile/LoginWidget.h \
-  C:/Users/LENOVO/Documents/Najaf\ Uni/Projects/Cinephile/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/moc_predefs.h \
+C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/EWIEGA46WW/moc_LoginWidget.cpp: C:/Users/DELL/Documents/Cinephile/LoginWidget.h \
+  C:/Users/DELL/Documents/Cinephile/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/Cinephile_autogen/moc_predefs.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QDeadlineTimer \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QEasingCurve \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QEvent \

@@ -1,4 +1,3 @@
-
 cmake_minimum_required(VERSION 3.16)
 
 project(Cinephile VERSION 0.1 LANGUAGES CXX)
@@ -10,8 +9,9 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Svg)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Svg)
+# ONLY CHANGE NEEDED: Add 'Network' to both find_package() calls
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Svg Network)  # ← Added Network
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Svg Network)  # ← Added Network
 
 set(PROJECT_SOURCES
         main.cpp
@@ -21,6 +21,8 @@ set(PROJECT_SOURCES
         LoginWidget.h
         DashboardWidget.cpp
         DashboardWidget.h
+          # Make sure this is included
+        HomePage.h    # Make sure this is included
         Theme.h
         resources.qrc
 )
@@ -29,28 +31,29 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Cinephile
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        form.ui
+        HomePage.cpp
+        MovieCard.h
+        MovieCard.cpp
+        MovieDetailWidget.h
+        MovieDetailWidget.cpp
     )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET Cinephile APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
     if(ANDROID)
-        add_library(Cinephile SHARED
-            ${PROJECT_SOURCES}
-        )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
+        add_library(Cinephile SHARED ${PROJECT_SOURCES})
     else()
-        add_executable(Cinephile
-            ${PROJECT_SOURCES}
-        )
+        add_executable(Cinephile ${PROJECT_SOURCES})
     endif()
 endif()
 
-target_link_libraries(Cinephile PRIVATE Qt${QT_VERSION_MAJOR}::Widgets
-Qt${QT_VERSION_MAJOR}::Svg)
+# ONLY CHANGE NEEDED: Add Qt${QT_VERSION_MAJOR}::Network to target_link_libraries
+target_link_libraries(Cinephile PRIVATE
+    Qt${QT_VERSION_MAJOR}::Widgets
+    Qt${QT_VERSION_MAJOR}::Svg
+    Qt${QT_VERSION_MAJOR}::Network  # ← Added this line
+)
+
+# ... (keep all remaining code below exactly the same)
+
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
