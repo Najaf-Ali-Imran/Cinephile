@@ -1,6 +1,6 @@
 # ===================================================================
 # Cinephile Project .gitignore
-# For Qt / C++ / CMake
+# For Qt / C++ / CMake with a 'Code' subdirectory structure
 # ===================================================================
 
 # -------------------------------------------------------------------
@@ -12,7 +12,8 @@
 
 # -------------------------------------------------------------------
 # Build Artifacts
-# Ignore all build output from CMake and compilers.
+# This is the most important section for your structure.
+# It ignores the entire /out/ directory and other common build folders.
 # -------------------------------------------------------------------
 /out/
 /build/
@@ -33,7 +34,6 @@
 
 # -------------------------------------------------------------------
 # CMake Generated Files
-# These are generated in the build directory but are good to ignore globally.
 # -------------------------------------------------------------------
 CMakeCache.txt
 CMakeFiles/
@@ -56,12 +56,8 @@ creator.user.pro
 
 # -------------------------------------------------------------------
 # Other Common IDE / Editor Files
-# For collaborators who might use different tools.
 # -------------------------------------------------------------------
-# Visual Studio Code
 .vscode/
-
-# Visual Studio
 .vs/
 *.VC.db
 *.VC.VC.opendb
@@ -78,14 +74,13 @@ Win32/
 Debug/
 Release/
 *.*.vcxproj.user
-
-# CLion
 .idea/
 
 
 # -------------------------------------------------------------------
 # Qt Generated Files
-# Usually handled by the build system, but good to ignore.
+# These patterns will ignore generated files even if they appear
+# inside your 'Code' directory.
 # -------------------------------------------------------------------
 moc_*.cpp
 qrc_*.cpp
@@ -95,12 +90,9 @@ ui_*.h
 # -------------------------------------------------------------------
 # Operating System Generated Files
 # -------------------------------------------------------------------
-# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
