@@ -14,6 +14,7 @@
 # Build Artifacts
 # Ignore all build output from CMake and compilers.
 # -------------------------------------------------------------------
+/out/
 /build/
 /build-*/
 /bin/
