@@ -7,7 +7,7 @@
 # Configuration Files with Secrets
 # CRITICAL: Do NOT commit files with API keys or other credentials.
 # -------------------------------------------------------------------
-/config.json
+config.json
 
 
 # -------------------------------------------------------------------
