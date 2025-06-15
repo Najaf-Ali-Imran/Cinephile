@@ -1,0 +1,12 @@
+{
+  "Firebase": {
+    "ApiKey": "YOUR_FIREBASE_API_KEY_HERE"
+  },
+  "GoogleOAuth": {
+    "ClientId": "YOUR_GOOGLE_OAUTH_CLIENT_ID_HERE",
+    "ClientSecret": "YOUR_GOOGLE_OAUTH_CLIENT_SECRET_HERE"
+  },
+  "Gemini": {
+    "ApiKey": "YOUR_GEMINI_API_KEY_HERE"
+  }
+}

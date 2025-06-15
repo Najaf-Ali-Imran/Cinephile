@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/icons/email_icon.svg</file>
+        <file>assets/icons/google_icon.svg</file>
+        <file>assets/icons/lock_icon.svg</file>
+        <file>assets/icons/user_icon.svg</file>
+        <file>assets/icons/categories_icon.svg</file>
+        <file>assets/icons/home_icon.svg</file>
+        <file>assets/icons/more_icon.svg</file>
+        <file>assets/icons/profile_icon.svg</file>
+        <file>assets/icons/search.svg</file>
+        <file>assets/icons/settings.svg</file>
+        <file>assets/icons/actor2.svg</file>
+        <file>assets/icons/actor1.svg</file>
+        <file>assets/icons/db_connected.svg</file>
+        <file>assets/icons/db_disconnected.svg</file>
+        <file>assets/icons/back.svg</file>
+        <file>assets/icons/logoc.png</file>
+        <file>assets/icons/logoc.svg</file>
+        <file>assets/icons/arrow_left.svg</file>
+        <file>assets/icons/arrow_right.svg</file>
+        <file>assets/icons/bookmark.svg</file>
+        <file>assets/icons/heart.svg</file>
+        <file>assets/icons/library.svg</file>
+        <file>assets/icons/watch.svg</file>
+        <file>assets/icons/clock.svg</file>
+        <file>assets/icons/chatbot.svg</file>
+        <file>assets/icons/send.svg</file>
+        <file>config.json</file>
+        <file>logo.ico</file>
+    </qresource>
+</RCC>
