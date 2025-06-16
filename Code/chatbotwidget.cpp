@@ -145,9 +145,7 @@ ChatbotWidget::ChatbotWidget(QWidget *parent)
         "4. If asked who created you, who made you, or any similar question, you MUST respond with: 'I was created by Najaf Ali, an Artificial Intelligence student from Air University, Islamabad. He's the director of my story.'\n"
         "5. For movie or TV show recommendations, keep your answers concise and provide 3-5 suggestions unless asked for more. Start your response directly with the recommendations.\n";
 
-    if (m_geminiApiKey.isEmpty() || m_geminiApiKey.contains("AIzaSyBU6TaKXmKOB_mNRYXRMdqxA7jsJcBhZX0")) {
-        qCritical() << "Gemini API Key missing.";
-    }
+    
 
     setupUi();
 }
